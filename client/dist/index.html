@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="main.css" rel="stylesheet">
+</head>
+
+<div class="bckg-color" id="dominant">
+    <div id="content">Hello!! I'm The dominant color</div>
+</div>
+<br>
+<br>
+<div class="color" id="color1">
+    <div id="content">Hellllloooo! I'm color 1!</div>
+</div>
+<br>
+<br>
+<div class="color" id="color2">
+    <div id="content">Hellllloooo! I'm color 2!</div>
+</div>
+<br>
+<br>
+<div class="color" id="color3">
+    <div id="content">Hellllloooo! I'm color 3!</div>
+</div>
+<br>
+<br>
+<div class="color" id="color4">
+    <div id="content">Hellllloooo! I'm color 4!</div>
+</div>
+<br>
+<br>
+<div class="color" id="color5">
+    <div id="content">Hellllloooo! I'm color 5!</div>
+</div>
+<br>
+<br>
+<div class="color" id="color6">
+    <div id="content">Hellllloooo! I'm color 6!</div>
+</div>
+<br>
+<br>
+<!-- Fire API request after divs are loaded -->
+<script type="text/javascript">
+
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        myObj = JSON.parse(this.responseText);
+        var rgb = JSON.parse(myObj.rgb);
+        document.body.style.backgroundColor = rgb.dominant;
+        document.getElementById("color1").style.backgroundColor = rgb.palette[0];
+        document.getElementById("color2").style.backgroundColor = rgb.palette[1];
+        document.getElementById("color3").style.backgroundColor = rgb.palette[2];
+        document.getElementById("color4").style.backgroundColor = rgb.palette[3];
+        document.getElementById("color5").style.backgroundColor = rgb.palette[4];
+        document.getElementById("color6").style.backgroundColor = rgb.palette[5];
+    }
+};
+var endpoint_url = "REPLACE_THIS_ENDPOINT_URL"
+xmlhttp.open("GET", endpoint_url, true);
+xmlhttp.send();
+
+</script>

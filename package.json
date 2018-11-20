@@ -1,0 +1,26 @@
+{
+  "name": "serverless-portfolio-presentation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "finch": "^1.3.11",
+    "serverless": "^1.33.2"
+  },
+  "devDependencies": {
+    "serverless-finch": "^2.3.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fernando-mc/making-serverless-development-portfolio-7-days.git"
+  },
+  "author": "Fernando Medina Corey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fernando-mc/making-serverless-development-portfolio-7-days/issues"
+  },
+  "homepage": "https://github.com/fernando-mc/making-serverless-development-portfolio-7-days#readme"
+}

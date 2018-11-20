@@ -72,3 +72,10 @@ package:
   exclude:
     - data-gathering/**
     - .env/**
+
+plugins:
+  - serverless-finch
+
+custom:
+  client:
+    bucketName: your-completely-unique-s3-bucketname
